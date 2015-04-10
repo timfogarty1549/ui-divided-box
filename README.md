@@ -53,3 +53,13 @@ Vertical boxes appear as
  + `max`: maximum size of this child, in pixels
  
  Use CSS to set the initial size of the child element.
+ 
+###Installation
+
++include ui-divided-box.js
++add module to angular
+
+	<script type="text/javascript" src="ui-divided-box.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("myApp", [ 'ui.divided.box' ]);
+	</script>

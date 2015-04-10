@@ -33,12 +33,7 @@ var Uidb = {
 
 angular.module('ui.divided.box', [])
 
-.constant('uiDividedBoxConfig', {
-	HORIZONTAL: 'horizontal',
-	VERTICAL: 'vertical'
-})
-
-.controller( 'uiDividedBoxController' , ['$scope', '$attrs', 'uiDividedBoxConfig', '$window', function ($scope, $attrs, uiDividedBoxConfig, $window ) {
+.controller( 'uiDividedBoxController' , ['$scope', '$attrs', '$window', function ($scope, $attrs, $window ) {
 
 	var findNode = function( attr, tag, defVal ) {
 		for( var i=0; i< attr.length; i++ ) {
@@ -50,7 +45,7 @@ angular.module('ui.divided.box', [])
 	};
 
 	this.container = '';
-	this.containerSize = function() { return this.isHorizontal ? this.container.width() : this.container.height()-5 };
+	this.containerSize = function() { return this.isHorizontal ? this.container.width() : this.container.height() };
 	this.items = [];
 	this.isHorizontal = $attrs.orientation.charAt(0) == 'h';
 
@@ -59,8 +54,8 @@ angular.module('ui.divided.box', [])
 			divider.resizerWidth = parseInt( findNode( divider[0].attributes, 'resizer-width' ) );
 			divider.offset = this.items.length;
 		}
-		item.min = parseInt(findNode( item.context.attributes, 'min', 10 ) );
-		item.max = parseInt(findNode( item.context.attributes, 'max', 99999 ) );
+		item.min = parseInt(findNode( item[0].attributes, 'min', 10 ) );
+		item.max = parseInt(findNode( item[0].attributes, 'max', 99999 ) );
 		item.divider = divider;
 		item.marginWidth = 0;
 		this.items.push( item );

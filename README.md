@@ -32,14 +32,13 @@ Horizontal boxes appear as
 
 | one | two | three |
 |-----|-----|-------|
-__
 
 Vertical boxes appear as 
 
 |  one  |
+|-------|
 |  two  |
 | three |
---
 
 ####Attributes for divided box elements
 

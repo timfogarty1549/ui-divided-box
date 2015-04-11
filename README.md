@@ -30,11 +30,13 @@ The full jQuery is required.
 	
 Horizontal boxes appear as
 
-| one | two | three |
+|                   |
 |-----|-----|-------|
+| one | two | three |
 
 Vertical boxes appear as 
 
+|       |
 |-------|
 |  one  |
 |  two  |

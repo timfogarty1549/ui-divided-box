@@ -5,12 +5,14 @@
 
 ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscript DividedBox](http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf69084-7e54.html) containers.  A divided box lays out its children horizontally or vertically, inserting a dragable divider between each child.  Dragging a divider increases or decreases the size of the element to the left in a horizontal divided box, or above in a vertical divided box, amd correspondingly takes away or adds to the last element in the list. 
 
+```html
 	<ui-divided-box orientation="horizontal" style="width:100%">
 		<div min="100" max="200" style="width:150px">one</div>
 		<div" min="100">two</div>
 		<div" min="200" max="300">three</div>
 		<div" min="100">four</div>
 	</ui-divided-box>
+```
 	
 creates a horizontal box of four DIVs each seperated by a vertical divider.  Drag the divider to resize the boxes.  
 

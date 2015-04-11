@@ -45,7 +45,10 @@ angular.module('ui.divided.box', [])
 	};
 
 	this.container = '';
-	this.containerSize = function() { return this.isHorizontal ? this.container.width() : this.container.height() };
+	this.containerSize = function() { 
+		return this.isHorizontal ? this.container.width() : this.container.height();
+	};
+
 	this.items = [];
 	this.isHorizontal = $attrs.orientation.charAt(0) == 'h';
 
@@ -95,10 +98,16 @@ angular.module('ui.divided.box', [])
 
 	this.setLastItem = function() {		// set last item to rest of container
 		var item = this.items[this.items.length-1];
+		/**
+		 * something is not being calculated correctly.  off by plus or minus 1. depends on outer container dimension.
+		 * but haven't been able to predict which one will be.
+		 * If 1px to small, then last item not drawn.  
+		 * If 1 pix too big then get space between borders
+		 */
 		var lastBorderWidth = this.isHorizontal ? 
-				item[0].offsetWidth - item.width() - item.marginWidth - (this.items.length-3)*6 :		// this last term is a hack
-				item[0].offsetHeight - item.height() - item.marginWidth;
-		var w = this.containerSize() - this.totalSize( false ) - lastBorderWidth;
+				item[0].offsetWidth - item.width() - item.marginWidth + 1 :
+				item[0].offsetHeight - item.height() - item.marginWidth - 4;
+		var w = this.containerSize() - this.totalSize( false ) - lastBorderWidth + (this.items.length-3)*6;		// this last term is a hack
 		if( w < item.min ) w = item.min;
 		else if( w > item.max ) w = item.max;
 		item.css( this.isHorizontal ? {'width': w+"px"} : {"height": w+'px'} );

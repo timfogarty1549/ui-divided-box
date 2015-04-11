@@ -35,8 +35,8 @@ Horizontal boxes appear as
 
 Vertical boxes appear as 
 
-|  one  |
 |-------|
+|  one  |
 |  two  |
 | three |
 
@@ -56,8 +56,8 @@ Vertical boxes appear as
  
 ###Installation
 
-+include ui-divided-box.js
-+add module to angular
+ + include ui-divided-box.js
+ + add module to angular
 
 	<script type="text/javascript" src="ui-divided-box.js"></script>
 	<script type="text/javascript">

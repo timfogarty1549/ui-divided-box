@@ -1,4 +1,9 @@
 'use strict';
+/**
+ * ui-divided-box.js  v0.1
+ * tim@fogarty.org
+ * https://github.com/timfogarty1549/ui-divided-box
+ */
 
 var __ui_divider_counter = 0;
 

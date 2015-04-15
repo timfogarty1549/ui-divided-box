@@ -8,9 +8,9 @@ ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscrip
 ```html
 	<ui-divided-box orientation="horizontal" style="width:100%">
 		<div min="100" max="200" style="width:150px">one</div>
-		<div" min="100">two</div>
-		<div" min="200" max="300">three</div>
-		<div" min="100">four</div>
+		<div min="100">two</div>
+		<div min="200" max="300">three</div>
+		<div min="100">four</div>
 	</ui-divided-box>
 ```
 	

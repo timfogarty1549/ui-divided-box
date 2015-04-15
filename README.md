@@ -32,17 +32,12 @@ The full jQuery is required.
 	
 Horizontal boxes appear as
 
-|     |     |       |
-|-----|-----|-------|
-| one | two | three |
+
+<table><tr><td style="border-right:2px solid gray">one</td><td style="border-right:2px solid gray">two</td><td>three</td></tr><table>
 
 Vertical boxes appear as 
 
-|       |
-|-------|
-|  one  |
-|  two  |
-| three |
+<table><tr><td style="border-bottom:2px solid gray">one</td></tr><tr><td style="border-bottom:2px solid gray">two</td></tr><tr><td style="border-bottom:2px solid gray">three</td></tr></table>
 
 ####Attributes for divided box elements
 
@@ -69,3 +64,7 @@ Vertical boxes appear as
 		var app = angular.module("myApp", [ 'ui.divided.box' ]);
 	</script>
 ```
+
+###Known Issues
+
+There is an error in calculating the width or height of the last element.  Depending on the width of the outer container, the last element is off between 0 and 3 pixels.

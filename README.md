@@ -1,9 +1,9 @@
-# ui-divided-box
+# ui-divided-box for angularJS
 
 
 ###OVERVIEW
 
-ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscript DividedBox](http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf69084-7e54.html) containers.  A divided box lays out its children horizontally or vertically, inserting a dragable divider between each child.  Dragging a divider increases or decreases the size of the element to the left in a horizontal divided box, or above in a vertical divided box, amd correspondingly takes away or adds to the last element in the list. 
+ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscript DividedBox](http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf69084-7e54.html) containers.  A divided box lays out its children horizontally or vertically, inserting a dragable divider between each child.  Dragging a divider increases or decreases the size of the element to the left in a horizontal divided box, or above in a vertical divided box, and correspondingly takes away or adds to the last element in the list. 
 
 ```html
 	<ui-divided-box orientation="horizontal" style="width:100%">
@@ -32,12 +32,11 @@ The full jQuery is required.
 	
 Horizontal boxes appear as
 
-
-<table><tr><td style="border-right:2px solid gray">one</td><td style="border-right:2px solid gray">two</td><td>three</td></tr><table>
+<table><tr><td>one</td><td>two</td><td>three</td></tr><table>
 
 Vertical boxes appear as 
 
-<table><tr><td style="border-bottom:2px solid gray">one</td></tr><tr><td style="border-bottom:2px solid gray">two</td></tr><tr><td style="border-bottom:2px solid gray">three</td></tr></table>
+<table><tr><td>one</td></tr><tr><td>two</td></tr><tr><td>three</td></tr></table>
 
 ####Attributes for divided box elements
 
@@ -46,7 +45,7 @@ Vertical boxes appear as
  + `divider-color`: the color of the divider. Defaults to gray.
  + `divider-class`: CSS class to apply to the divider.  Defaults to null.
 
-###Attributes for child elements
+###Attributes for child elements of divided boxes
 
  + `min`: minimum size of this child, in pixels, defaults to 10
  + `max`: maximum size of this child, in pixels

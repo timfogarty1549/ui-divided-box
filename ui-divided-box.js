@@ -5,7 +5,11 @@
  * https://github.com/timfogarty1549/ui-divided-box
  */
 
-var __ui_divider_counter = 0;
+//var __ui_divider_counter = 0;
+
+/**
+ * a couple of methods to merge attributes
+ */
 
 var Uidb = {
 //		Replace element with it's first child

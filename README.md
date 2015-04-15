@@ -46,7 +46,7 @@ Vertical boxes appear as
 
 ####Attributes for divided box elements
 
- + `orientation`: for <ui-divided-box> only.  Indicates layout direction.  If first character is 'h' then the layout is horizontal, otherwise it is vertical.
+ + `orientation`: for &lt;ui-divided-box> only.  Indicates layout direction.  If first character is 'h' then the layout is horizontal, otherwise it is vertical.
  + `divider-width`: the width of the divider. Defaults to 3 pxiels.
  + `divider-color`: the color of the divider. Defaults to gray.
  + `divider-class`: CSS class to apply to the divider.  Defaults to null.
@@ -63,7 +63,9 @@ Vertical boxes appear as
  + include ui-divided-box.js
  + add module to angular
 
+```html
 	<script type="text/javascript" src="ui-divided-box.js"></script>
 	<script type="text/javascript">
 		var app = angular.module("myApp", [ 'ui.divided.box' ]);
 	</script>
+```

@@ -3,7 +3,7 @@
 
 ###OVERVIEW
 
-ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscript DividedBox](http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf69084-7e54.html) containers.  A divided box lays out its children horizontally or vertically, inserting a dragable divider between each child.  Dragging a divider increases or decreases the size of the element to the left in a horizontal divided box, or above in a vertical divided box, and correspondingly takes away or adds to the last element in the list. 
+ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscript DividedBox](http://help.adobe.com/en_US/flex/using/WS2db454920e96a9e51e63e3d11c0bf69084-7e54.html) containers.  A divided box lays out its children horizontally or vertically, inserting a draggable divider between each child.  Dragging a divider increases or decreases the size of the element to the left in a horizontal divided box, or above in a vertical divided box, and correspondingly takes away or adds to the last element in the list. 
 
 ```html
 	<ui-divided-box orientation="horizontal" style="width:100%">
@@ -14,7 +14,7 @@ ui-divided-box is a set of AngularJS directives that mimic the [Flex/Actionscrip
 	</ui-divided-box>
 ```
 	
-creates a horizontal box of four DIVs each seperated by a vertical divider.  Drag the divider to resize the boxes.  
+creates a horizontal box of four DIVs each separated by a vertical divider.  Drag the divider to resize the boxes.  
 
 You can find examples on the [demo page](http://timfogarty1549.github.io/ui-divided-box/).
 
@@ -41,7 +41,7 @@ Vertical boxes appear as
 ####Attributes for divided box elements
 
  + `orientation`: for &lt;ui-divided-box> only.  Indicates layout direction.  If first character is 'h' then the layout is horizontal, otherwise it is vertical.
- + `divider-width`: the width of the divider. Defaults to 3 pxiels.
+ + `divider-width`: the width of the divider. Defaults to 3 pixels.
  + `divider-color`: the color of the divider. Defaults to gray.
  + `divider-class`: CSS class to apply to the divider.  Defaults to null.
 
@@ -67,3 +67,7 @@ Vertical boxes appear as
 ###Known Issues
 
 There is an error in calculating the width or height of the last element.  Depending on the width of the outer container, the last element is off between 0 and 3 pixels.
+
+####Future Development
+
+Rather than using a simple background color for the draggable divider, use a repeatable image, or vectors on a canvas.
